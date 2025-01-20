@@ -8,3 +8,14 @@
 a {
     color: #333;
 }
+
+body {
+    padding-bottom: 500px;
+    
+}
+
+.class {
+    border-bottom: 1px solid #e41f1f;
+    padding: 2em;
+    margin-bottom: 1em;
+}
