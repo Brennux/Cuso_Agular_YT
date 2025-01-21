@@ -1,8 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-if-render',
-  imports: [],
+  imports: [CommonModule],//lembrar de colocar 
   templateUrl: './if-render.component.html',
   styleUrl: './if-render.component.css'
 })

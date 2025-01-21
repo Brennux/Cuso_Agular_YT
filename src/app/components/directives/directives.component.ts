@@ -4,7 +4,6 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-directives',
   imports: [CommonModule],
-  standalone : true,
   templateUrl: './directives.component.html',
   styleUrl: './directives.component.css'
 })

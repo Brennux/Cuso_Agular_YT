@@ -1,4 +1,7 @@
 <div class="class">
-    <div *ngIF="canShow">Estamos mostrando isso porque foi permitido</div>
-    <h2 *ngIF="name === 'matheus'">o nome  é matheus</h2>
+    @if(canShow){
+        <div>Estamos mostrando isso porque foi permitido</div>
+
+    }
+    <h2 *ngIf="name === 'matheus'">o nome  é matheus</h2>
 </div>
