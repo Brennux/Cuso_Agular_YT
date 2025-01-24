@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-parent-data',
-  imports: [CommonModule],
+  imports: [CommonModule,RouterModule],
   standalone : true,
   templateUrl: './parent-data.component.html',
   styleUrl: './parent-data.component.css'
