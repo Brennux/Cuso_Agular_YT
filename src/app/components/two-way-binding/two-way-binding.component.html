@@ -1,0 +1,14 @@
+<div class="class">
+    <p>app-two-way-binding</p>
+    <form>
+        <input type="text" 
+        [(ngModel)]="name"
+        name = "name"
+        placerholder = "Digite seu nome"
+    />
+    <input type="submit" value="Enviar">
+    </form>
+    <div *ngIf="name !== ''">
+        <p>Seu nome é: {{ name }}</p>
+    </div> 
+</div>
