@@ -9,11 +9,11 @@ import { ListRenderComponent } from "./components/list-render/list-render.compon
 import { PipesComponent } from "./components/pipes/pipes.component";
 import { TwoWayBindingComponent } from "./components/two-way-binding/two-way-binding.component";
 import { RouterModule } from '@angular/router';
-
+import {} from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterModule,FirstComponentComponent, ParentDataComponent, DirectivesComponent, IfRenderComponent, EventosComponent, EmitterComponent, ListRenderComponent, PipesComponent, TwoWayBindingComponent],
+  imports: [RouterModule,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   standalone : true

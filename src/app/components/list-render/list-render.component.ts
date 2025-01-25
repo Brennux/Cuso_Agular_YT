@@ -2,21 +2,16 @@ import { CommonModule} from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Animal } from '../../Animal';
 import { ListService } from '../../services/list.service';
+import { RouterLink, RouterModule } from '@angular/router';
 @Component({
   standalone: true,
   selector: 'app-list-render',
-  imports: [CommonModule],
+  imports: [CommonModule,RouterLink],
   templateUrl: './list-render.component.html',
   styleUrl: './list-render.component.css'
 })
 export class ListRenderComponent implements OnInit {
   animals: Animal[] = [];
-
-  animal: Animal = {
-    name: 'turca',
-    type: 'dog',
-    age: 3,
-  };
 
   animalDetails = ""
 
