@@ -3,18 +3,14 @@ import { Component, OnInit } from '@angular/core';
 import { Animal } from '../../Animal';
 import { ListService } from '../../services/list.service';
 @Component({
+  standalone: true,
   selector: 'app-list-render',
   imports: [CommonModule],
   templateUrl: './list-render.component.html',
   styleUrl: './list-render.component.css'
 })
 export class ListRenderComponent implements OnInit {
-  animals: Animal[] = [
-    {name: 'turca', type: 'dog', age: 3},
-    {name: 'luna', type: 'cat', age: 2},
-    {name: 'zeus', type: 'dog', age: 5},
-    {name: 'milo', type: 'horse', age: 7},
-  ]
+  animals: Animal[] = [];
 
   animal: Animal = {
     name: 'turca',
@@ -24,7 +20,9 @@ export class ListRenderComponent implements OnInit {
 
   animalDetails = ""
 
-  constructor(private listService:ListService ) {}
+  constructor(private listService:ListService ) {
+    this.getANimals()
+  }
   ngOnInit(): void {}
 
   showAge(animal: Animal) {
@@ -36,5 +34,9 @@ export class ListRenderComponent implements OnInit {
     this.animals = this.listService.remove(this.animals, animal);
   }
   
+  getANimals() {
+    this.listService.getAll().subscribe((animals) => (this.animals = animals));
   }
 
+
+}
